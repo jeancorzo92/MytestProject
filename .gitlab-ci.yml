@@ -7,7 +7,8 @@ variables:
 
 before_script:
   - echo $HOME
-  - echo $ANDROID_HOME
+  - cd $HOME
+  - ls
 
 stages:
   - build
