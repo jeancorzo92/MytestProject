@@ -1,6 +1,6 @@
 before_script:
-  - ./gradlew :app:assembleDebug
-  - ./gradlew :app:assembleDebugAndroidTest
+  - ./gradlew assembleDebug
+  - ./gradlew assembleDebugAndroidTest
   - export ANDROID_HOME=$HOME/Android/Sdk
   - export PATH=$PATH:$ANDROID_HOME/platform-tools/
 
