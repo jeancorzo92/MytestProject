@@ -6,6 +6,7 @@ variables:
   ANDROID_SDK_TOOLS: "24.4.1"
 
 before_script:
+  - echo $HOME
   - echo $ANDROID_HOME
 
 stages:
