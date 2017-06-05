@@ -6,9 +6,8 @@ variables:
   ANDROID_SDK_TOOLS: "24.4.1"
 
 before_script:
-  - echo $HOME
-  - cd $HOME
-  - ls
+  - export ANDROID_HOME=$HOME/Android/Sdk
+  - export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 stages:
   - build
