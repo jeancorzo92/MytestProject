@@ -1,0 +1,9 @@
+before_script:
+  - ./gradlew :app:assembleDebug
+  - ./gradlew :app:assembleDebugAndroidTest
+
+testFirebase:
+  script:
+    - gcloud firebase test android run firebase-test-matrix.yml:nexus5-device --type instrumentation --app app/build/outputs/apk/app-debug.apk --test app/build/outputs/apk/app-debug-androidTest.apk --project mytestproject-a1d69
+
+

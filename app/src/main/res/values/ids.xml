@@ -1,6 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item type="id" name="editText" />
-    <item type="id" name="editText2" />
-    <item type="id" name="button" />
 </resources>
