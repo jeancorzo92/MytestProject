@@ -3,13 +3,15 @@ package com.example.jean.mytestproject
 import android.app.Activity
 import android.os.Bundle
 import android.widget.Button
+import com.example.jean.mytestproject.domain.ForecastRequest
+import com.example.jean.mytestproject.domain.RequestForecastCommand
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.InterstitialAd
-import org.jetbrains.anko.find
-import org.jetbrains.anko.toast
+import org.jetbrains.anko.*
 
 class MainActivity : Activity() {
+
 
     val adView: AdView by lazy { find<AdView>(R.id.adView) }
     val adRequest: AdRequest
@@ -27,6 +29,7 @@ class MainActivity : Activity() {
 
         button.setOnClickListener {
             if (interstitialAd.isLoaded) interstitialAd.show() else toast("not loaded")
+            startActivity<ForecastActivity>()
         }
     }
 }
